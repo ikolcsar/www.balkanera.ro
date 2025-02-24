@@ -7,11 +7,11 @@
   <style>
     iframe {
       display: block;
-      width: 100vw; /* Full width */
-      height: 100vh; /* Full height */
+      width: 100vw; /* Ocupă toată lățimea ferestrei */
+      height: 100vh; /* Ocupă toată înălțimea ferestrei */
       object-fit: cover;
     }
-    /* Video pentru mobil și desktop */
+    /* Ascunde embed-ul de desktop pe mobil și invers */
     @media (max-width: 768px) {
       .desktop-video { display: none; }
       .mobile-video { display: block; }
@@ -25,20 +25,20 @@
 <body>
 
   <!-- YouTube Embed pentru desktop -->
-  <iframe class="desktop-video" 
-    src="https://www.youtube.com/embed/36dJo5R1gM4?autoplay=1&loop=1&playlist=36dJo5R1gM4&controls=0&modestbranding=1&rel=0" 
-    title="YouTube Video Player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  <iframe class="desktop-video"
+    src="https://www.youtube.com/embed/36dJo5R1gM4?autoplay=1&mute=1&loop=1&playlist=36dJo5R1gM4&controls=0&modestbranding=1&rel=0"
+    title="YouTube Video Player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen>
   </iframe>
 
   <!-- YouTube Embed pentru mobil -->
-  <iframe class="mobile-video" 
-    src="https://www.youtube.com/embed/ZVjrffD70Z0?autoplay=1&loop=1&playlist=ZVjrffD70Z0&controls=0&modestbranding=1&rel=0" 
-    title="YouTube Shorts" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  <iframe class="mobile-video"
+    src="https://www.youtube.com/embed/ZVjrffD70Z0?autoplay=1&mute=1&loop=1&playlist=ZVjrffD70Z0&controls=0&modestbranding=1&rel=0"
+    title="YouTube Shorts"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen>
   </iframe>
 
