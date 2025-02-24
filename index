@@ -3,43 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
+    <title>Pagina Stageflow</title>
     <style>
-        html, body {
-            height: 100%; /* Asigură că html și body ocupă 100% din înălțime */
-            margin: 0; /* Elimină marginea implicită */
-            padding: 0; /* Elimină padding-ul implicit */
-            overflow: hidden; /* Opțional: Ascunde barele de defilare */
-        }
-
-        .desktop-image {
+        video {
             display: block;
-        }
-
-        .mobile-image {
-            display: none;
-        }
-
-        @media (max-width: 600px) {
-            .desktop-image {
-                display: none;
-            }
-
-            .mobile-image {
-                display: block;
-            }
-        }
-
-        img {
-            display: block;
-            width: 100vw; /* Lățimea imaginii este 100% din lățimea vizibilă a ferestrei */
-            height: 100vh; /* Înălțimea imaginii este 100% din înălțimea vizibilă a ferestrei */
+            width: 100vw; /* Lățimea video-ului este 100% din lățimea vizibilă a ferestrei */
+            height: 100vh; /* Înălțimea video-ului este 100% din înălțimea vizibilă a ferestrei */
             object-fit: cover; /* Umple întreaga zonă, menținând raportul de aspect */
+        }
+
+        /* Media query pentru mobile (dacă vrei să ai video diferit pentru mobil și desktop) */
+        @media (max-width: 768px) {
+            .desktop-video {
+                display: none; /* Ascunde video-ul desktop pe mobil */
+            }
+            .mobile-video {
+                display: block; /* Afișează video-ul mobil pe ecranele mici */
+            }
+        }
+
+        /* Media query pentru desktop */
+        @media (min-width: 769px) {
+            .desktop-video {
+                display: block; /* Afișează video-ul desktop pe ecranele mari */
+            }
+            .mobile-video {
+                display: none; /* Ascunde video-ul mobil pe desktop */
+            }
         }
     </style>
 </head>
 <body>
-    <img class="desktop-image" src="https://imgur.com/a/OYeEvp5" alt="Under Construction" />
-    <img class="mobile-image" src="https://imgur.com/bHnzLKP" alt="Under Construction" />
+
+    <!-- Video pentru desktop -->
+    <video class="desktop-video" autoplay loop muted>
+        <source src="https://imgur.com/DbcZff5" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Video pentru mobil -->
+    <video class="mobile-video" autoplay loop muted>
+        <source src="https://imgur.com/bHnzLKP" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
 </body>
 </html>
