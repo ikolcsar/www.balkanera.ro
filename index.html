@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagina Stageflow</title>
   <style>
-    iframe {
+    video {
       display: block;
-      width: 100vw; /* Ocupă toată lățimea ferestrei */
-      height: 100vh; /* Ocupă toată înălțimea ferestrei */
-      object-fit: cover;
+      width: 100vw; /* Lățimea video-ului este 100% din lățimea vizibilă a ferestrei */
+      height: 100vh; /* Înălțimea video-ului este 100% din înălțimea vizibilă a ferestrei */
+      object-fit: cover; /* Umple întreaga zonă, menținând raportul de aspect */
     }
-    /* Ascunde embed-ul de desktop pe mobil și invers */
+    /* Media query pentru mobile */
     @media (max-width: 768px) {
       .desktop-video { display: none; }
       .mobile-video { display: block; }
     }
+    /* Media query pentru desktop */
     @media (min-width: 769px) {
       .desktop-video { display: block; }
       .mobile-video { display: none; }
@@ -24,23 +25,17 @@
 </head>
 <body>
 
-  <!-- YouTube Embed pentru desktop -->
-  <iframe class="desktop-video"
-    src="https://www.youtube.com/embed/36dJo5R1gM4?autoplay=1&mute=1&loop=1&playlist=36dJo5R1gM4&controls=0&modestbranding=1&rel=0"
-    title="YouTube Video Player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
+  <!-- Video pentru desktop -->
+  <video class="desktop-video" autoplay loop muted playsinline>
+    <source src="https://storage.rcs-rds.ro/links/8f233a02-15d3-4620-9f2f-039cc5b30254" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-  <!-- YouTube Embed pentru mobil -->
-  <iframe class="mobile-video"
-    src="https://www.youtube.com/embed/ZVjrffD70Z0?autoplay=1&mute=1&loop=1&playlist=ZVjrffD70Z0&controls=0&modestbranding=1&rel=0"
-    title="YouTube Shorts"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
+  <!-- Video pentru mobil -->
+  <video class="mobile-video" autoplay loop muted playsinline>
+    <source src="https://storage.rcs-rds.ro/links/61c01de6-be65-4b60-aa00-97b6e45b4dd3" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
 </body>
 </html>
