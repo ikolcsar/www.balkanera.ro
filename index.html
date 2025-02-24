@@ -6,10 +6,13 @@
     <title>Pagina Stageflow</title>
     <style>
         video {
+            margin: 0;
+            padding: 0;
             display: block;
             width: 100vw; /* Lățimea video-ului este 100% din lățimea vizibilă a ferestrei */
             height: 100vh; /* Înălțimea video-ului este 100% din înălțimea vizibilă a ferestrei */
             object-fit: cover; /* Umple întreaga zonă, menținând raportul de aspect */
+            overflow: hidden;
         }
 
         /* Media query pentru mobile (dacă vrei să ai video diferit pentru mobil și desktop) */
@@ -37,13 +40,13 @@
 
     <!-- Video pentru desktop -->
     <video class="desktop-video" autoplay loop muted>
-        <source src="https://www.dropbox.com/scl/fi/2ey19ptvqpj81d718zkr0/Balkanera-Video.mp4?rlkey=pi97lidcfiq01de6u26rravm8&st=npwerwos&dl=1" type="video/mp4">
+        <source src="https://www.dropbox.com/scl/fi/2ey19ptvqpj81d718zkr0/Balkanera-Video.mp4?raw=1" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <!-- Video pentru mobil -->
     <video class="mobile-video" autoplay loop muted>
-        <source src="https://www.dropbox.com/scl/fi/m7gvzfkrlw1mqb75vf7to/Balkanera-Mobile-Video.mp4?rlkey=rtoledd60twogmxyipobsitvd&st=ycwxvyw5&dl=1" type="video/mp4">
+        <source src="https://www.dropbox.com/scl/fi/m7gvzfkrlw1mqb75vf7to/Balkanera-Mobile-Video.mp4?raw=1" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
