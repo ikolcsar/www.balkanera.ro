@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Stageflow</title>
     <style>
-        video {
+        iframe {
             display: block;
-            width: 100vw; /* Lățimea video-ului este 100% din lățimea vizibilă a ferestrei */
-            height: 100vh; /* Înălțimea video-ului este 100% din înălțimea vizibilă a ferestrei */
+            width: 100vw; /* Lățimea iframe-ului este 100% din lățimea vizibilă a ferestrei */
+            height: 100vh; /* Înălțimea iframe-ului este 100% din înălțimea vizibilă a ferestrei */
             object-fit: cover; /* Umple întreaga zonă, menținând raportul de aspect */
         }
 
@@ -35,16 +35,11 @@
 </head>
 <body>
 
-    <!-- Video pentru desktop -->
-    <video class="desktop-video" autoplay loop muted>
-    <source src="https://drive.google.com/uc?export=view&id=1HyYsMt-NVAu5Ny6uACySm-JLYWP2F90_" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+    <!-- YouTube Embed pentru desktop -->
+    <iframe class="desktop-video" src="https://www.youtube.com/embed/36dJo5R1gM4?autoplay=1&loop=1&playlist=36dJo5R1gM4" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<video class="mobile-video" autoplay loop muted>
-    <source src="https://drive.google.com/uc?export=view&id=1Mbe4kPnizEJCM4k8sHSf4mblI-D-LSwC" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+    <!-- YouTube Embed pentru mobil -->
+    <iframe class="mobile-video" src="https://www.youtube.com/embed/ZVjrffD70Z0?autoplay=1&loop=1&playlist=ZVjrffD70Z0" title="YouTube Shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </body>
 </html>
