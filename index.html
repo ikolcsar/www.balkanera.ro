@@ -9,40 +9,40 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Asigură că dimensiunile sunt corect calculate, fără a include padding sau margini */
+            box-sizing: border-box;
         }
 
         body, html {
             height: 100%;
             width: 100%;
-            overflow: hidden; /* Ascunde orice conținut care depășește dimensiunile ferestrei */
+            overflow: hidden;
         }
 
         /* Setări pentru video */
         video {
             display: block;
-            width: 100vw; /* Lățimea video-ului este 100% din lățimea vizibilă a ferestrei */
-            height: 100vh; /* Înălțimea video-ului este 100% din înălțimea vizibilă a ferestrei */
-            object-fit: cover; /* Video-ul va umple întreaga zonă, păstrând raportul de aspect */
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
         }
 
         /* Media query pentru mobile */
         @media (max-width: 768px) {
             .desktop-video {
-                display: none; /* Ascunde video-ul desktop pe mobil */
+                display: none;
             }
             .mobile-video {
-                display: block; /* Afișează video-ul mobil pe ecranele mici */
+                display: block;
             }
         }
 
         /* Media query pentru desktop */
         @media (min-width: 769px) {
             .desktop-video {
-                display: block; /* Afișează video-ul desktop pe ecranele mari */
+                display: block;
             }
             .mobile-video {
-                display: none; /* Ascunde video-ul mobil pe desktop */
+                display: none;
             }
         }
     </style>
@@ -51,14 +51,13 @@
 
     <!-- Video pentru desktop -->
     <video class="desktop-video" autoplay loop muted>
-        <source src="https://www.dropbox.com/scl/fi/2ey19ptvqpj81d718zkr0/Balkanera-Video.mp4?rlkey=pi97lidcfiq01de6u26rravm8&st=npwerwos&dl=1" type="video/mp4">
+        <source src="https://www.dropbox.com/scl/fi/2ey19ptvqpj81d718zkr0/Balkanera-Video.mp4?rlkey=pi97lidcfiq01de6u26rravm8&raw=1" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <!-- Video pentru mobil -->
     <video class="mobile-video" autoplay loop muted>
-        <source src="https://www.dropbox.com/scl/fi/1z986d87qfl8a2ywfln1e/Balkanera-Mobile-Video.mov?rlkey=2b8s50l78lzxj3mchgopwxpzx&st=9siovy41&raw=1
-" type="video/mov">
+        <source src="https://www.dropbox.com/scl/fi/1z986d87qfl8a2ywfln1e/Balkanera-Mobile-Video.mp4?rlkey=2b8s50l78lzxj3mchgopwxpzx&raw=1" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
