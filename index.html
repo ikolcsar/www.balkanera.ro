@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina Stageflow</title>
-  <style>
-    video {
-      display: block;
-      width: 100vw; /* Lățimea video-ului este 100% din lățimea vizibilă a ferestrei */
-      height: 100vh; /* Înălțimea video-ului este 100% din înălțimea vizibilă a ferestrei */
-      object-fit: cover; /* Umple întreaga zonă, menținând raportul de aspect */
-    }
-    /* Media query pentru mobile */
-    @media (max-width: 768px) {
-      .desktop-video { display: none; }
-      .mobile-video { display: block; }
-    }
-    /* Media query pentru desktop */
-    @media (min-width: 769px) {
-      .desktop-video { display: block; }
-      .mobile-video { display: none; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Stageflow</title>
+    <style>
+        video {
+            display: block;
+            width: 100vw; /* Lățimea video-ului este 100% din lățimea vizibilă a ferestrei */
+            height: 100vh; /* Înălțimea video-ului este 100% din înălțimea vizibilă a ferestrei */
+            object-fit: cover; /* Umple întreaga zonă, menținând raportul de aspect */
+        }
+
+        /* Media query pentru mobile (dacă vrei să ai video diferit pentru mobil și desktop) */
+        @media (max-width: 768px) {
+            .desktop-video {
+                display: none; /* Ascunde video-ul desktop pe mobil */
+            }
+            .mobile-video {
+                display: block; /* Afișează video-ul mobil pe ecranele mici */
+            }
+        }
+
+        /* Media query pentru desktop */
+        @media (min-width: 769px) {
+            .desktop-video {
+                display: block; /* Afișează video-ul desktop pe ecranele mari */
+            }
+            .mobile-video {
+                display: none; /* Ascunde video-ul mobil pe desktop */
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Video pentru desktop -->
-  <video class="desktop-video" autoplay loop muted playsinline>
-    <source src="https://storage.rcs-rds.ro/links/8f233a02-15d3-4620-9f2f-039cc5b30254" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <!-- Video pentru desktop -->
+    <video class="desktop-video" autoplay loop muted>
+        <source src="https://www.dropbox.com/scl/fi/2ey19ptvqpj81d718zkr0/Balkanera-Video.mp4?rlkey=pi97lidcfiq01de6u26rravm8&st=npwerwos&dl=1" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-  <!-- Video pentru mobil -->
-  <video class="mobile-video" autoplay loop muted playsinline>
-    <source src="https://storage.rcs-rds.ro/links/61c01de6-be65-4b60-aa00-97b6e45b4dd3" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <!-- Video pentru mobil -->
+    <video class="mobile-video" autoplay loop muted>
+        <source src="https://www.dropbox.com/scl/fi/m7gvzfkrlw1mqb75vf7to/Balkanera-Mobile-Video.mp4?rlkey=rtoledd60twogmxyipobsitvd&st=ycwxvyw5&dl=1" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
 </body>
 </html>
