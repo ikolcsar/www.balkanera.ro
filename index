@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <style>
+        html, body {
+            height: 100%; /* Asigură că html și body ocupă 100% din înălțime */
+            margin: 0; /* Elimină marginea implicită */
+            padding: 0; /* Elimină padding-ul implicit */
+            overflow: hidden; /* Opțional: Ascunde barele de defilare */
+        }
+
+        .desktop-image {
+            display: block;
+        }
+
+        .mobile-image {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .desktop-image {
+                display: none;
+            }
+
+            .mobile-image {
+                display: block;
+            }
+        }
+
+        img {
+            display: block;
+            width: 100vw; /* Lățimea imaginii este 100% din lățimea vizibilă a ferestrei */
+            height: 100vh; /* Înălțimea imaginii este 100% din înălțimea vizibilă a ferestrei */
+            object-fit: cover; /* Umple întreaga zonă, menținând raportul de aspect */
+        }
+    </style>
+</head>
+<body>
+    <img class="desktop-image" src="https://i.imgur.com/t5kVkSn.png" alt="Under Construction" />
+    <img class="mobile-image" src="https://i.imgur.com/SRFDCes.png" alt="Under Construction" />
+</body>
+</html>
